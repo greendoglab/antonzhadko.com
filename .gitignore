@@ -1,0 +1,6 @@
+*.pyc
+*.db
+src/media
+src/static/CACHE
+src/.sass-cache
+src/filmd/local_settings.py

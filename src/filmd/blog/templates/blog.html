@@ -1,0 +1,13 @@
+{% extends "base.html" %}{% load thumbnail markup comments endless %}
+
+{% block js %}
+<script src="/static/js/endless.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/endless_on_scroll.js" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+
+{% block content %}
+<div class="block">
+    <h3>{{ url_prefix }}</h3>
+    {% include page_template %}
+</div>
+{% endblock %}

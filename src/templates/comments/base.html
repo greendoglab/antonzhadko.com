@@ -1,0 +1,40 @@
+<!DOCTYPE html>{% load markup thumbnail compress %}
+<html lang="ru-RU">
+<head>
+<title></title>
+<meta charset="UTF-8" />
+<meta name="author" content="Михаил Якименко" />
+
+{% compress css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/style.scss" type="text/x-sass" charset="utf-8">
+{% endcompress %}
+<script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/css/jquery.lightbox-0.5.css" media="screen" />
+<script type="text/javascript" src="/static/js/jquery.lightbox-0.5.js"></script>
+{% block js %}
+{% endblock %}
+<script language="JavaScript" type="text/javascript" src="/static/js/func.js"></script>
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } })(); </script> <![endif]-->
+</head>
+<body style="background: url({{ MEDIA_URL }}{% for item in myphoto %}{{ item.image }}{% endfor %}) no-repeat top left fixed; background-size: cover;">
+
+<aside class="site_side">
+    <nav>
+        <ul>
+            <li><a href="/">В начало</a></li>
+            {% for item in site_menu %}
+            <li><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+</aside>
+
+<section class="site_content">
+    <div class="block">
+        {% block content %}
+        {% endblock %}
+    </div>
+</section>
+
+</body>
+</html>

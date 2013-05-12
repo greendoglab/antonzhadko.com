@@ -1,0 +1,15 @@
+{% load thumbnail endless %}
+{% paginate 9 gallery %}
+<div class="gallery">
+    {% for photo in gallery %}
+        <figure class="gallery_image">
+            {% thumbnail photo.image "x500" as big %}
+                {% thumbnail photo.image "300" crop="center" as small %}
+                    <a href="{{ big.url }}" class="gallery_item"><img src="{{ small.url }}"></a>
+                {% endthumbnail %}
+            {% endthumbnail %}
+            <figcaption class="image_title">{{ photo.title }}</figcaption>
+        </figure>
+    {% endfor %}
+</div>
+{% show_more 'Еще' %}

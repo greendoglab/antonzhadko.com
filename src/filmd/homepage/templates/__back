@@ -1,0 +1,98 @@
+<header class="site_header">
+    <nav class="site_nav">
+        <div class="myphoto">
+            {% for item in myphoto %}
+                {% thumbnail item.image "300x300" crop="center" as im %}
+                  <img src="{{ im.url }}">
+                {% endthumbnail %}
+            {% endfor %}
+        </div>
+        <div class="ribbon"><div class="ribbon-stitches-top"></div><strong class="ribbon-content"><h1>Антон Жадько - режиссер</h1></strong><div class="ribbon-stitches-bottom"></div></div> 
+        <ul class="main_menu">
+            <li><a href="/">В начало</a></li>
+            {% for item in site_menu %}
+            <li><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+    <nav class="social">
+        <ul>
+            <li>
+                <div class="circle">
+                    <a href="#">e</a>
+                </div>
+            </li>
+            <li>
+                <div class="circle">
+                    <a href="#">i</a>
+                </div>
+            </li>
+            <li>
+                <div class="circle">
+                    <a href="#">l</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+{% extends "base.html" %}{% load thumbnail markup %}
+
+{% block content %}
+{% for item in site_title %}
+<h2 class="title">
+    <span>{{ item.title }}</span>
+</h2>
+<div class="block">
+    {{ item.description|markdown }}
+</div>
+{% endfor %}
+
+<h2 class="title">Что нового!</h2>
+
+<div class="block no_bg wrap_row">
+    <div class="half left">
+        <h3>Фильмы</h3>
+        <ul class="item_list movies_list">
+            {% for item in movie %}
+            <li>
+                <h3>
+                    <a href="{{ item.get_absolute_url }}" class="title">{{ item.title }}</a>
+                </h3>
+                <article>{{ item.get_description|markdown }}</article>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="half right">
+        <h3>Блог</h3>
+        <ul class="item_list blog_list">
+            {% for item in blog %}
+            <li>
+                <h3>
+                    <a href="{{ item.get_absolute_url }}" class="title">{{ item.title }}</a>
+                </h3>
+                <article>{{ item.get_description|markdown }}</article>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<h2 class="title">Галерея!</h2>
+
+<div class="block no_bg">
+    <ul class="gallery">
+        {% for item in gallery %}
+        <li>
+            <a href="{{ item.gallery.get_absolute_url }}">
+                {% thumbnail item.image "400x300" crop="left" as im %}
+                    <img src="{{ im.url }}">
+                {% endthumbnail %}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Preview your comment" %}{% endblock %}
+
+{% block content %}
+  <div class="block">
+    {% load comments %}
+    
+    <div class="my-comment-form">
+      <form action="{% comment_form_target %}" method="post">{% csrf_token %}
+    
+        {% if form.errors %}
+          <h1>{% blocktrans count counter=form.errors|length %}Please correct the error below{% plural %}Please correct the errors below{% endblocktrans %}</h1>
+        {% else %}
+          <h1>{% trans "Preview your comment" %}</h1>
+          <blockquote>{{ comment|linebreaks }}</blockquote>
+          <p>
+          {% trans "and" %} <input type="submit" name="submit" class="submit-post" value="{% trans "Post your comment" %}" id="submit" /> {% trans "or make changes" %}:
+          </p>
+        {% endif %}
+    
+        {% if next %}<div><input type="hidden" name="next" value="{{ next }}" /></div>{% endif %}
+        {% for hidden in form.hidden_fields %}
+          {{ hidden }}
+        {% endfor %}
+        <div class="my-comment{% if form.comment.errors %} error{% endif %}"><label for="id_comment">Ваш комментарий</label>{{ form.comment }}</div>
+        {% if form.comment.errors %}{{ form.comment.errors }}{% endif %}
+        <div class="text-field{% if form.name.errors %} error{% endif %}"><label for="id_name">Имя</label>{{ form.name }}</div>
+        <div class="text-field{% if form.email.errors %} error{% endif %}"><label for="id_email">Почта</label>{{ form.email }}</div>
+        <br>
+        <div class="text-field">{% if form.comment.errors %}{{ form.name.errors }}{% endif %}</div>
+        <div class="text-field">{% if form.comment.errors %}{{ form.email.errors }}{% endif %}</div>
+        <p class="submit">
+          <input type="submit" name="post" class="submit-post" value="{% trans "Post" %}" />
+          <input type="submit" name="preview" class="submit-preview" value="{% trans "Preview" %}" />
+        </p>
+      </form>
+    </div>
+  </div>
+{% endblock %}

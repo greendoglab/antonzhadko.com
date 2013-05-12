@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}Спасибо!{% endblock %}
+
+{% block content %}
+  <h1>Спасибо!</h1>
+  <p>
+        <i>Ваш комментарий ожидает модерации.</i>
+  </p>
+  <p>
+      Вернуться к записи
+        <a href="{{ comment.content_object.get_absolute_url }}">{{ comment.content_object.title }}</a>
+  </p>
+{% endblock %}

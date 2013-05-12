@@ -1,0 +1,13 @@
+{% extends "base.html" %}{% load thumbnail markup comments gravatar nofollow %}
+
+{% block content %}
+<div class="block">
+    <div class="post">
+        <article>
+            <h2 class="title {{ item.type_post }}"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+            <div class="separate"></div>
+            {{ post.get_post|markdown }}
+        </article>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}{% load thumbnail markup %}
+
+{% block js %}
+<link rel="stylesheet" type="text/css" href="/static/css/jquery.lightbox-0.5.css" media="screen" />
+<script src="/static/js/endless.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/endless_on_scroll.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="/static/js/jquery.lightbox-0.5.js"></script>
+<script language="JavaScript" type="text/javascript" src="/static/js/slides.jquery.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="block no_bg">
+    <h3>{{ url_prefix }}</h3>
+    {% include page_template %}
+</div>
+
+{% endblock %}

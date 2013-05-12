@@ -1,0 +1,31 @@
+{% load markup gravatar nofollow %}
+<dl id="comments">
+  {% for comment in comment_list %}
+    <dt class="" id="c{{ comment.id }}">
+
+        <div class="avatar-box">
+            <div class="avatar">
+                <img src="{% gravatar_url comment.email %}" alt="">
+            </div>
+        </div>
+
+        <div class="comment-author">
+            <span class="name">
+                {{ comment.name }}
+            </span> 
+            <div class="meta-date">
+                сказал
+                <a href="{{ comment.content_object.get_absolute_url }}#c{{ comment.id }}">
+                    {{ comment.submit_date.date }} в {{ comment.submit_date|time:"H:i" }}
+                </a>:
+            </div>
+        </div>
+    </dt>
+    <dd>
+        <article>
+            <div class="comment-decor"></div>
+            {{ comment.comment|markdown|nofollow|safe }}
+        </article>
+    </dd>
+  {% endfor %}
+</dl>

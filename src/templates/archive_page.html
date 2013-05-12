@@ -1,0 +1,31 @@
+{% load markup endless comments %}
+{% paginate post %}
+{% for item in post %}
+<div class="post">
+    <article>
+        <h2 class="title {{ item.type_post }}"><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></h2>
+        <div class="separate"></div>
+        <div class="meta">
+            {{ item.date.date }} //
+            {% get_comment_count for item as comment_count %}
+            {% if comment_count %}
+                {% if comment_count == 1 %}
+                    <a href="{{ item.get_absolute_url }}#send-comment">{{ comment_count }}</a> комментарий.
+                {% else %}
+                    <a href="{{ item.get_absolute_url }}#send-comment">{{ comment_count }}</a> комментариев.
+                {% endif %}
+            {% else %}
+                Еще нет комментариев
+            {% endif %}
+            <div class="tags">
+                {% for tag in item.tags.all %}
+                <a class="cat" href="{{ tag.get_absolute_url }}">{{ tag.title }}</a>{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {{ item.get_description|markdown }}
+        
+    </article>
+</div>
+{% endfor %}
+{% show_more 'Еще' %}

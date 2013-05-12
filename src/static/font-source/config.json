@@ -1,0 +1,320 @@
+{
+  "name": "icons",
+  "glyphs": [
+    {
+      "search": [
+        "star"
+      ],
+      "code": 120,
+      "from": 9733,
+      "uid": "1526e1ee08023c1542cbf65d3a9afa93",
+      "css": "star",
+      "orig_css": "star",
+      "orig_code": 120,
+      "src": "websymbols"
+    },
+    {
+      "search": [
+        "mail",
+        "email"
+      ],
+      "code": 122,
+      "from": 9993,
+      "uid": "cba6018f5de17c76f70b7d2c06037e5a",
+      "css": "mail",
+      "orig_css": "mail",
+      "orig_code": 122,
+      "src": "websymbols"
+    },
+    {
+      "search": [
+        "pencil",
+        "write",
+        "reply",
+        "edit"
+      ],
+      "code": 46,
+      "uid": "c77fd2fd065b5fe16d6f2b41e190b266",
+      "css": "pencil",
+      "orig_css": "pencil",
+      "orig_code": 46,
+      "src": "entypo",
+      "from": 9998
+    },
+    {
+      "search": [
+        "quote"
+      ],
+      "code": 98,
+      "uid": "c3e5dafba1739ef33cc574c7484febf7",
+      "css": "quote",
+      "orig_css": "quote",
+      "orig_code": 98,
+      "src": "entypo",
+      "from": 10078
+    },
+    {
+      "search": [
+        "video",
+        "chat",
+        "talk"
+      ],
+      "code": 102,
+      "uid": "f274acf461473025f0d75518b653ec14",
+      "css": "video-chat",
+      "orig_css": "video-chat",
+      "orig_code": 102,
+      "src": "elusive",
+      "from": 57360
+    },
+    {
+      "search": [
+        "tag",
+        "category",
+        "price",
+        "offer"
+      ],
+      "code": 103,
+      "uid": "630529f03c319c01101aa167181b650e",
+      "css": "tag",
+      "orig_css": "tag",
+      "orig_code": 103,
+      "src": "elusive",
+      "from": 57385
+    },
+    {
+      "search": [
+        "social",
+        "logo",
+        "picasa"
+      ],
+      "code": 107,
+      "uid": "866934e4e5cfbc2d2a00d08f30257397",
+      "css": "picasa",
+      "orig_css": "picasa",
+      "orig_code": 107,
+      "src": "elusive",
+      "from": 57441
+    },
+    {
+      "search": [
+        "phone",
+        "telephone",
+        "call"
+      ],
+      "code": 104,
+      "uid": "c91098f07ff0df45b3f8666b72b75801",
+      "css": "phone",
+      "orig_css": "phone",
+      "orig_code": 104,
+      "src": "elusive",
+      "from": 57445
+    },
+    {
+      "search": [
+        "list",
+        "clipboard"
+      ],
+      "code": 106,
+      "uid": "c9bef3dc67fea47e94c4a5030ea64dad",
+      "css": "clipboard",
+      "orig_css": "clipboard",
+      "orig_code": 106,
+      "src": "elusive",
+      "from": 57471
+    },
+    {
+      "search": [
+        "movie",
+        "video",
+        "film"
+      ],
+      "code": 53,
+      "uid": "09b251f36844ae25d58767d85d21bf88",
+      "css": "video-alt",
+      "orig_css": "video-alt",
+      "orig_code": 53,
+      "src": "elusive",
+      "from": 57577
+    },
+    {
+      "search": [
+        "social",
+        "logo",
+        "vkontakte"
+      ],
+      "code": 108,
+      "uid": "34cfa573b7d6c70c298dfad4cac4d466",
+      "css": "vkontakte",
+      "orig_css": "vkontakte",
+      "orig_code": 108,
+      "src": "elusive",
+      "from": 57614
+    },
+    {
+      "search": [
+        "chat",
+        "talk"
+      ],
+      "code": 100,
+      "uid": "2c0b53280f82068f6bab4e2200025d9f",
+      "css": "chat",
+      "orig_css": "chat",
+      "orig_code": 100,
+      "src": "entypo",
+      "from": 59168
+    },
+    {
+      "search": [
+        "rss"
+      ],
+      "code": 113,
+      "from": 59194,
+      "uid": "26f5aa38f3889213334b3990b4ad483b",
+      "css": "rss-1",
+      "orig_css": "rss",
+      "orig_code": 113,
+      "src": "websymbols"
+    },
+    {
+      "search": [
+        "rss"
+      ],
+      "code": 119,
+      "from": 59195,
+      "uid": "7645346d5ab8b17f69a9c765c180aca3",
+      "css": "rss-alt",
+      "orig_css": "rss-alt",
+      "orig_code": 119,
+      "src": "websymbols"
+    },
+    {
+      "search": [
+        "facebook"
+      ],
+      "code": 101,
+      "from": 62209,
+      "uid": "ebbe0cc0600cb69375abc20af545967f",
+      "css": "facebook-rect",
+      "orig_css": "facebook-rect",
+      "orig_code": 101,
+      "src": "websymbols"
+    },
+    {
+      "search": [
+        "twitter"
+      ],
+      "code": 114,
+      "from": 62211,
+      "uid": "a4765de460cc6485b1ca5b36222f41d5",
+      "css": "twitter-bird",
+      "orig_css": "twitter-bird",
+      "orig_code": 114,
+      "src": "websymbols"
+    },
+    {
+      "search": [
+        "yandex"
+      ],
+      "code": 52,
+      "meta": {
+        "twitter": "https://twitter.com/puzrin",
+        "github": "https://github.com/puzrin",
+        "author": "Vitaly Puzrin"
+      },
+      "uid": "b2417d1ce399577d53fff70d54976fea",
+      "file": "yandex",
+      "css": "yandex",
+      "orig_css": "yandex",
+      "orig_code": 52,
+      "src": "brandico",
+      "from": 62213
+    },
+    {
+      "search": [
+        "google"
+      ],
+      "code": 116,
+      "from": 62217,
+      "uid": "0e5740f288f6f5cb04eef63f7f0a1506",
+      "css": "googleplus-rect",
+      "orig_css": "googleplus-rect",
+      "orig_code": 116,
+      "src": "websymbols"
+    },
+    {
+      "search": [
+        "vkontakte"
+      ],
+      "code": 117,
+      "from": 62218,
+      "uid": "f6dfd6896053ff75262b8ad4baec251e",
+      "css": "vkontakte-rect",
+      "orig_css": "vkontakte-rect",
+      "orig_code": 117,
+      "src": "websymbols"
+    },
+    {
+      "search": [
+        "skype"
+      ],
+      "code": 121,
+      "from": 62219,
+      "uid": "a25ef3626c7bd7031709a8264f280bfe",
+      "css": "skype",
+      "orig_css": "skype",
+      "orig_code": 121,
+      "src": "websymbols"
+    },
+    {
+      "search": [
+        "odnoklassniki"
+      ],
+      "code": 111,
+      "from": 62221,
+      "uid": "5fb90c2cd2cc4ceb3fb6e787aae73fd3",
+      "css": "odnoklassniki-rect",
+      "orig_css": "odnoklassniki-rect",
+      "orig_code": 111,
+      "src": "websymbols"
+    },
+    {
+      "searcj": [
+        "youtube"
+      ],
+      "code": 105,
+      "from": 62227,
+      "uid": "2d3ce9463ed5525c6faa01f84c957843",
+      "css": "youtube",
+      "orig_css": "youtube",
+      "orig_code": 105,
+      "src": "websymbols"
+    },
+    {
+      "search": [
+        "movie",
+        "video",
+        "film"
+      ],
+      "code": 99,
+      "from": 127916,
+      "uid": "c23a66951b34ed7d449688d559afb213",
+      "css": "video",
+      "orig_css": "video",
+      "orig_code": 99,
+      "src": "websymbols"
+    },
+    {
+      "search": [
+        "download"
+      ],
+      "code": 97,
+      "uid": "b08cfe8039de2ce815686aced2caef06",
+      "css": "download",
+      "orig_css": "download",
+      "orig_code": 97,
+      "src": "entypo",
+      "from": 128229
+    }
+  ]
+}
