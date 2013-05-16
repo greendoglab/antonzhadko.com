@@ -9,7 +9,10 @@ class ImageStorageAdmin(admin.ModelAdmin):
     
     def image_display(self, obj):
         thumb = default.backend.get_thumbnail(obj.image.file, ADMIN_THUMBS_SIZE)
-        return '<img src="%s" width="%s" />' % (thumb.url, thumb.width)
+        try:
+            return '<img src="%s" width="%s" />' % (thumb.url, thumb.width)
+        except:
+            return 'no image'
 
     def code_display(self, obj):
         return '[%s|%s|%s]' % (obj.image.url, obj.title, obj.description)
