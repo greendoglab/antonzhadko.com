@@ -5,11 +5,21 @@ from django.template import RequestContext
 from endless_pagination.decorators import page_template
 from django.db.models import Avg, Max, Min, Count
 
+# @page_template("archive_page.html")
+# def blog(request, template="blog.html", extra_context=None):
+#     context = {
+#         'url_prefix' : u'Блог',
+#         'post': Post.objects.filter(draft=True)
+#     }
+#     if extra_context is not None:
+#         context.update(extra_context)
+#     return render_to_response(template, context, context_instance=RequestContext(request))
+
 @page_template("archive_page.html")
-def blog(request, template="blog.html", extra_context=None):
+def reports_view(request, template="blog.html", extra_context=None):
     context = {
-        'url_prefix' : u'Блог',
-        'post': Post.objects.filter(draft=True)
+        'url_prefix' : u'Репортажи',
+        'post': Post.objects.filter(draft=True).filter(type_post='reports')
     }
     if extra_context is not None:
         context.update(extra_context)

@@ -32,7 +32,7 @@ class Post(models.Model):
 
     TYPE_OF_POST = (
         ('movie', 'Фильмы'),
-        ('blog', 'Блог'),
+        ('reports', 'Репортажи'),
         ('news', 'Новости'),
         ('clip', 'Клипы'),
     )
