@@ -1,21 +1,18 @@
 {% extends "base.html" %}{% load thumbnail markup %}
 
 {% block content %}
-<div id="gallery" class="block no_bg">
-    {% for item in gallery %}
-    <h3 class="title">{{ item.title }}</h3>
-    <ul class="gallery">
-        {% for photo in item.galleryimage_set.all %}
-            <li>
-                <a href="{{ photo.gallery.get_absolute_url }}">
-                {% thumbnail photo.image "400x300" crop="left" as im %}
-                    <img src="{{ im.url }}">
-                {% endthumbnail %}
-                </a>
-            </li>
+<div class="block no_bg">
+    <div class="gallereis">{% for item in gallery %}
+        <h3 class="title">{{ item.title }}</h3>
+            {% for photo in item.galleryimage_set.all|slice:"1" %}
+                    <a href="{{ photo.gallery.get_absolute_url }}">
+                    {% thumbnail photo.image "400x300" crop="left" as im %}
+                        <img src="{{ im.url }}">
+                    {% endthumbnail %}
+                    </a>
+            {% endfor %}
         {% endfor %}
-    </ul>
-    {% endfor %}
+    </div>
 </div>
 
 {% endblock %}

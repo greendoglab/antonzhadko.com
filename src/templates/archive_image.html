@@ -1,7 +1,7 @@
 {% load thumbnail endless %}
-{% paginate 9 gallery %}
+{% paginate 9 photos %}
 <div class="gallery">
-    {% for photo in gallery %}
+    {% for photo in photos %}
         <figure class="gallery_image">
             {% thumbnail photo.image "x500" as big %}
                 {% thumbnail photo.image "300" crop="center" as small %}

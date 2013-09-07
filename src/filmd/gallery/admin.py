@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-from models import GalleryImage
+from models import Gallery, GalleryImage
 from django.contrib import admin
 from sorl.thumbnail import default
 
 ADMIN_THUMBS_SIZE = '100x100'
 
-# class GalleryAdmin(admin.ModelAdmin):
-#     prepopulated_fields = {'slug': ('title',)}
-#     list_per_page = 15
+class GalleryAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ('title',)}
+    list_per_page = 15
 
 class GalleryImageAdmin(admin.ModelAdmin):
     def image_display(self, obj):
@@ -21,5 +21,5 @@ class GalleryImageAdmin(admin.ModelAdmin):
     list_display = ('get_title', 'image_display')
     list_per_page = 10
 
-# admin.site.register(Gallery, GalleryAdmin)
+admin.site.register(Gallery, GalleryAdmin)
 admin.site.register(GalleryImage, GalleryImageAdmin)
