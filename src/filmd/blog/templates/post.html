@@ -35,29 +35,6 @@
                     <div class="fb-like" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false"></div>
                 </div>
             </div>
-            <div class="comments">
-                <div class="comment-count">
-                    <div class="comment-count-in">
-                        {% get_comment_count for post as comment_count %}
-                        {% if comment_count %}
-                            {% if comment_count == 1 %}
-                                {{ comment_count }} комментарий.
-                            {% else %}
-                                {{ comment_count }} комментариев.
-                            {% endif %}
-                        {% else %}
-                            Еще нет комментариев
-                        {% endif %}
-                        <a href="{{ post.get_absolute_url }}#send-comment">Оставьте свой</a>
-                    </div>
-                </div>
-                
-                {% render_comment_list for post %}
-                <div id="send-comment">
-                    <h3>Оставьте свой</h3>
-                    {% render_comment_form for post %}
-                </div>
-            </div>
         </footer>
     </div>
 </div>
