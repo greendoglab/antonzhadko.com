@@ -7,17 +7,7 @@
             <h2 class="title {{ item.type_post }}"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
             <div class="separate"></div>
             <div class="meta">
-                {{ post.date.date }} //
-                {% get_comment_count for post as comment_count %}
-                {% if comment_count %}
-                    {% if comment_count == 1 %}
-                        <a href="{{ post.get_absolute_url }}#send-comment">{{ comment_count }}</a> комментарий.
-                    {% else %}
-                        <a href="{{ post.get_absolute_url }}#send-comment">{{ comment_count }}</a> комментариев.
-                    {% endif %}
-                {% else %}
-                    Еще нет комментариев
-                {% endif %}
+                {{ post.date.date }}
             </div>
             {{ post.get_post|markdown }}
         </article>
